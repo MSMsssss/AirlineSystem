@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="msm.view.UserSceneController">
+   <children>
+      <TabPane layoutX="174.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="购买机票">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker fx:id="leaveTimePicker" layoutX="181.0" layoutY="248.0" prefHeight="36.0" prefWidth="286.0" />
+                        <Label layoutX="94.0" layoutY="254.0" prefHeight="24.0" prefWidth="77.0" text="出发日期" />
+                        <Label layoutX="237.0" layoutY="149.0" prefHeight="24.0" prefWidth="61.0" text="出发地" />
+                        <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="386.0" layoutY="184.0" onMouseClicked="#clickExchange" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../sourcematerial/picture/exchange.jpg" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="arriveCityBox" editable="true" layoutX="446.0" layoutY="181.0" onShowing="#onShowingCity" prefHeight="36.0" prefWidth="172.0" />
+                        <ComboBox fx:id="leaveCityBox" editable="true" layoutX="181.0" layoutY="181.0" onShowing="#onShowingCity" prefHeight="36.0" prefWidth="172.0" />
+                        <Label layoutX="502.0" layoutY="149.0" prefHeight="24.0" prefWidth="61.0" text="目的地" />
+                        <ImageView fitHeight="110.0" fitWidth="94.0" layoutX="353.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="353.0" AnchorPane.rightAnchor="353.0" AnchorPane.topAnchor="26.0">
+                           <image>
+                              <Image url="@../../../sourcematerial/picture/logo1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="636.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../sourcematerial/picture/msm.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="335.0" layoutY="324.0" mnemonicParsing="false" onAction="#searchTickets" prefHeight="36.0" prefWidth="130.0" text="查询机票" />
+                        <ImageView fitHeight="45.0" fitWidth="29.0" layoutX="14.0" layoutY="12.0" onMouseClicked="#clickBack" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../sourcematerial/picture/back.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="历史订单">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.38345864661654133" layoutX="251.0" layoutY="147.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView fx:id="orderTableView" layoutX="164.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="orderIdColumn" prefWidth="100.0" text="订单号" />
+                                        <TableColumn fx:id="planeIdColumn" prefWidth="100.0" text="航班号" />
+                                          <TableColumn fx:id="passengerNameColumn" minWidth="0.0" prefWidth="100.0" text="乘客姓名" />
+                                          <TableColumn fx:id="leaveTimeColumn" prefWidth="200.0" text="起飞时间" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="493.0" prefWidth="172.0">
+                                 <children>
+                                    <CheckBox fx:id="showGottenTicketBox" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" text="显示已取票订单" />
+                                    <CheckBox fx:id="showReturnTicketBox" layoutX="182.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="显示已退票订单" />
+                                    <Button layoutX="14.0" layoutY="48.0" mnemonicParsing="false" onAction="#SearchOrder" prefHeight="36.0" prefWidth="70.0" text="检索" />
+                                    <ImageView fitHeight="39.0" fitWidth="42.0" layoutX="216.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../sourcematerial/picture/arrow.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="leaveAirportField" alignment="CENTER" editable="false" layoutX="24.0" layoutY="193.0" prefHeight="36.0" prefWidth="182.0" />
+                                    <TextField fx:id="arriveAirportField" alignment="CENTER" editable="false" layoutX="268.0" layoutY="194.0" prefHeight="36.0" prefWidth="182.0" />
+                                    <Label fx:id="leaveTimeLabel" alignment="CENTER" layoutX="24.0" layoutY="231.0" prefHeight="24.0" prefWidth="182.0" />
+                                    <Label fx:id="arriveTimeLabel" alignment="CENTER" layoutX="268.0" layoutY="231.0" prefWidth="182.0" />
+                                    <TextField fx:id="planeIdField" alignment="CENTER" editable="false" layoutX="110.0" layoutY="130.0" prefHeight="36.0" prefWidth="177.0" />
+                                    <Label layoutX="171.0" layoutY="104.0" prefHeight="24.0" prefWidth="58.0" text="航班号" />
+                                    <TextField fx:id="seatIdField" alignment="CENTER" editable="false" layoutX="294.0" layoutY="130.0" prefHeight="36.0" prefWidth="57.0" />
+                                    <Label layoutX="301.0" layoutY="104.0" prefHeight="24.0" prefWidth="42.0" text="座号" />
+                                    <Button fx:id="returnTicketButton" layoutX="204.0" layoutY="406.0" mnemonicParsing="false" onAction="#returnTicket" prefHeight="36.0" prefWidth="66.0" text="退票" />
+                                    <VBox fillWidth="false" layoutX="111.0" layoutY="265.0" prefHeight="82.0" prefWidth="190.0" spacing="10.0">
+                                       <children>
+                                          <Label fx:id="passengerNameLabel" prefHeight="24.0" prefWidth="189.0" />
+                                          <Label fx:id="passengerIdLabel" prefHeight="24.0" prefWidth="189.0" />
+                                          <Label fx:id="paymentLabel" prefHeight="24.0" prefWidth="189.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fillWidth="false" layoutX="24.0" layoutY="265.0" prefHeight="82.0" prefWidth="97.0" spacing="10.0">
+                                       <children>
+                                          <Label prefHeight="24.0" prefWidth="96.0" text="乘客姓名：" />
+                                          <Label prefHeight="24.0" prefWidth="96.0" text="身份证号：" />
+                                          <Label prefHeight="24.0" prefWidth="96.0" text="付款金额：" />
+                                       </children>
+                                    </VBox>
+                                    <Label fx:id="gottenLabel" layoutX="379.0" layoutY="333.0" prefHeight="24.0" prefWidth="94.0" textFill="#d71515" />
+                                    <Label fx:id="returnLabel" layoutX="379.0" layoutY="309.0" prefHeight="24.0" prefWidth="94.0" textFill="#d71010" />
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="14.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="userNameLabel" layoutX="55.0" layoutY="560.0" prefHeight="24.0" prefWidth="94.0" />
+      <Label fx:id="currentTimeLabel" layoutX="510.0" layoutY="560.0" prefHeight="24.0" prefWidth="268.0" />
+   </children>
+</AnchorPane>

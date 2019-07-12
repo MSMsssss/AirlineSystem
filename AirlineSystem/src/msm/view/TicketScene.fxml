@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="msm.view.TicketSceneController">
+   <children>
+      <TextField fx:id="leaveAirportField" alignment="CENTER" editable="false" layoutX="64.0" layoutY="116.0" prefHeight="36.0" prefWidth="207.0" />
+      <TextField fx:id="arriveAirportField" alignment="CENTER" editable="false" layoutX="341.0" layoutY="116.0" prefHeight="36.0" prefWidth="207.0" />
+      <Label fx:id="leaveTimeLabel" alignment="CENTER" layoutX="64.0" layoutY="150.0" prefHeight="24.0" prefWidth="207.0" text="Label" />
+      <Label fx:id="arriveTimeLabel" alignment="CENTER" layoutX="341.0" layoutY="150.0" prefHeight="24.0" prefWidth="207.0" text="Label" />
+      <ImageView fitHeight="69.0" fitWidth="71.0" layoutX="266.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/logo1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="290.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/arrow.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="64.0" layoutY="203.0" prefHeight="24.0" prefWidth="78.0" text="乘客姓名" />
+      <Label layoutX="64.0" layoutY="239.0" prefHeight="24.0" prefWidth="113.0" text="乘客身份证号" />
+      <Label layoutX="341.0" layoutY="203.0" prefHeight="24.0" prefWidth="59.0" text="座位号" />
+      <Label fx:id="passengerNameLabel" layoutX="142.0" layoutY="203.0" prefHeight="24.0" prefWidth="113.0" text="Label" />
+      <Label fx:id="passengerIdLabel" layoutX="176.0" layoutY="239.0" prefHeight="24.0" prefWidth="158.0" text="Label" />
+      <Label fx:id="seatIdLabel" layoutX="400.0" layoutY="203.0" prefHeight="24.0" prefWidth="59.0" text="Label" />
+   </children>
+</AnchorPane>

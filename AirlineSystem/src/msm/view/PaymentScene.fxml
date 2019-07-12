@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="msm.view.PaymentSceneController">
+   <children>
+      <TextField fx:id="balanceField" editable="false" layoutX="94.0" layoutY="53.0" prefHeight="36.0" prefWidth="101.0" />
+      <Label layoutX="14.0" layoutY="59.0" prefHeight="24.0" prefWidth="80.0" text="账户余额" />
+      <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="userNameLabel" layoutX="56.0" layoutY="17.0" prefHeight="24.0" prefWidth="131.0" />
+      <Button layoutX="212.0" layoutY="53.0" mnemonicParsing="false" onAction="#clickRechargeButton" prefHeight="36.0" prefWidth="62.0" text="充值" />
+      <ImageView fitHeight="108.0" fitWidth="101.0" layoutX="381.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/logo1.png" />
+         </image>
+      </ImageView>
+      <VBox fillWidth="false" layoutX="341.0" layoutY="146.0" prefHeight="322.0" prefWidth="322.0" spacing="10.0">
+         <children>
+            <TextField fx:id="passengerNameField" prefHeight="36.0" prefWidth="313.0" />
+            <TextField fx:id="passengerIdField" prefHeight="36.0" prefWidth="313.0" />
+            <TextField fx:id="phoneNumberField" prefHeight="36.0" prefWidth="313.0" />
+            <TextField fx:id="planeIdField" editable="false" prefHeight="36.0" prefWidth="313.0" />
+            <TextField fx:id="leaveAirportField" editable="false" prefHeight="36.0" prefWidth="313.0" />
+            <TextField fx:id="leaveTimeField" editable="false" prefHeight="36.0" prefWidth="313.0" />
+            <TextField fx:id="seatNumField" editable="false" prefHeight="36.0" prefWidth="313.0" />
+            <TextField fx:id="shouldPayField" editable="false" prefHeight="36.0" prefWidth="313.0" />
+         </children>
+      </VBox>
+      <VBox fillWidth="false" layoutX="248.0" layoutY="146.0" prefHeight="322.0" prefWidth="93.0" spacing="23.0">
+         <children>
+            <Label prefHeight="24.0" prefWidth="85.0" text="乘客姓名" />
+            <Label prefHeight="24.0" prefWidth="82.0" text="身份证号" />
+            <Label prefHeight="24.0" prefWidth="80.0" text="电话号码" />
+            <Label prefHeight="24.0" prefWidth="72.0" text="航班号" />
+            <Label prefHeight="24.0" prefWidth="87.0" text="始发地" />
+            <Label prefHeight="24.0" prefWidth="79.0" text="登机时间" />
+            <Label prefHeight="24.0" prefWidth="64.0" text="座位号" />
+            <Label prefHeight="24.0" prefWidth="79.0" text="付款金额" />
+         </children>
+      </VBox>
+      <Button layoutX="358.0" layoutY="529.0" mnemonicParsing="false" onAction="#clickPayButton" prefHeight="36.0" prefWidth="62.0" text="付款" />
+      <Button layoutX="451.0" layoutY="529.0" mnemonicParsing="false" onAction="#clickBackButton" prefHeight="36.0" prefWidth="62.0" text="返回" />
+   </children>
+</AnchorPane>

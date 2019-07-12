@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="msm.view.RegisterSceneController">
+   <children>
+      <ImageView fitHeight="83.0" fitWidth="72.0" layoutX="189.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/user.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="userNameField" layoutX="175.0" layoutY="177.0" prefHeight="36.0" prefWidth="242.0" AnchorPane.bottomAnchor="287.0" />
+      <PasswordField fx:id="passwordField" layoutX="175.0" layoutY="237.0" prefHeight="36.0" prefWidth="242.0" AnchorPane.bottomAnchor="227.0" />
+      <PasswordField fx:id="passwordAgainField" layoutX="175.0" layoutY="297.0" prefHeight="36.0" prefWidth="242.0" AnchorPane.bottomAnchor="167.0" />
+      <TextField fx:id="peopleIdField" layoutX="175.0" layoutY="357.0" prefHeight="36.0" prefWidth="242.0" AnchorPane.bottomAnchor="107.0" />
+      <Label layoutX="89.0" layoutY="183.0" prefHeight="24.0" prefWidth="57.0" text="用户名" />
+      <Label layoutX="98.0" layoutY="243.0" prefHeight="24.0" prefWidth="38.0" text="密码" />
+      <Label layoutX="81.0" layoutY="303.0" prefHeight="24.0" prefWidth="72.0" text="确认密码" />
+      <Label layoutX="34.0" layoutY="363.0" prefHeight="24.0" prefWidth="129.0" text="默认身份证号码" />
+      <Button layoutX="189.0" layoutY="421.0" mnemonicParsing="false" onAction="#clickRegister" prefHeight="36.0" prefWidth="72.0" text="注册" />
+      <Label fx:id="messageLabel" layoutX="175.0" layoutY="143.0" prefHeight="24.0" prefWidth="152.0" />
+      <Button layoutX="311.0" layoutY="421.0" mnemonicParsing="false" onAction="#clickExit" prefHeight="36.0" prefWidth="72.0" text="退出" />
+   </children>
+</AnchorPane>

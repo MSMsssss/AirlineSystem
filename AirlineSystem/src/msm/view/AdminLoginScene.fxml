@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="msm.view.AdminLoginSceneController">
+   <children>
+      <PasswordField fx:id="passwordField" layoutX="94.0" layoutY="83.0" prefHeight="36.0" prefWidth="178.0" promptText="请输入管理员密码" />
+      <Label layoutX="43.0" layoutY="89.0" prefHeight="24.0" prefWidth="41.0" text="密码" />
+      <ImageView fitHeight="53.0" fitWidth="57.0" layoutX="124.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/admin.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="141.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickLoginButton" prefHeight="36.0" prefWidth="73.0" text="登录" />
+   </children>
+</AnchorPane>

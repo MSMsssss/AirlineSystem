@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="msm.view.RechargeSceneController">
+   <children>
+      <Label layoutX="74.0" layoutY="114.0" prefHeight="24.0" prefWidth="81.0" text="充值金额" />
+      <ComboBox fx:id="rechargeValueBox" layoutX="155.0" layoutY="108.0" prefHeight="36.0" prefWidth="132.0" />
+      <Button layoutX="168.0" layoutY="182.0" mnemonicParsing="false" onAction="#clickSureButton" prefHeight="36.0" prefWidth="66.0" text="确认" />
+      <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="171.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/recharge.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickBackButton" prefHeight="36.0" prefWidth="66.0" text="返回" />
+   </children>
+</AnchorPane>

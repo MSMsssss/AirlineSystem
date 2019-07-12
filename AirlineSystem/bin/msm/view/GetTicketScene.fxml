@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="msm.view.GetTicketSceneController">
+   <children>
+      <ImageView fitHeight="97.0" fitWidth="93.0" layoutX="354.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/logo1.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="passengerIdField" layoutX="165.0" layoutY="135.0" prefHeight="36.0" prefWidth="273.0" promptText="请输入身份证号码" />
+      <Label layoutX="65.0" layoutY="141.0" prefHeight="24.0" prefWidth="100.0" text="身份证号码" />
+      <Button layoutX="454.0" layoutY="135.0" mnemonicParsing="false" onAction="#clickSearchButton" prefHeight="36.0" prefWidth="100.0" text="查询订单" />
+      <TableView fx:id="orderTableView" layoutX="7.0" layoutY="193.0" prefHeight="256.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="orderIdColumn" prefWidth="100.0" text="订单号" />
+          <TableColumn fx:id="planeIdColumn" prefWidth="100.0" text="航班号" />
+          <TableColumn fx:id="leaveAirportColumn" prefWidth="100.0" text="始发站" />
+            <TableColumn fx:id="arriveAirportColumn" prefWidth="100.0" text="终点站" />
+            <TableColumn fx:id="seatNumColumn" prefWidth="100.0" text="座位号" />
+            <TableColumn fx:id="leaveTimeColumn" prefWidth="200.0" text="起飞时间" />
+            <TableColumn fx:id="passengerNameColumn" prefWidth="100.0" text="乘客姓名" />
+        </columns>
+      </TableView>
+      <Button layoutX="364.0" layoutY="471.0" mnemonicParsing="false" onAction="#clickGetButton" prefHeight="36.0" prefWidth="74.0" text="取票" />
+      <ImageView fitHeight="36.0" fitWidth="33.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#clickBackButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../sourcematerial/picture/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
